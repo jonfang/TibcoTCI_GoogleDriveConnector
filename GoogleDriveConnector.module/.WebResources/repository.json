@@ -1,0 +1,19 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [{
+            "localTimestamp": 1471391723664,
+            "localURI": "/GoogleDriveConnector.module/Service Descriptors/GoogleDriveConnector_1.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1471416405000,
+            "localHash": "7bf8531be45938f02fc1b7e5476b928fab66314f",
+            "remoteId": "3",
+            "remoteHash": "7bf8531be45938f02fc1b7e5476b928fab66314f"
+        }],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [{
+        "location": "Service Descriptors/googledriveconnector.module.Process-Drive.json",
+        "type": "generated"
+    }]
+}

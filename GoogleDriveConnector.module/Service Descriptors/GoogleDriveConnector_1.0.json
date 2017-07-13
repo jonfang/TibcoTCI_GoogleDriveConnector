@@ -1,0 +1,109 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "GoogleDriveConnector",
+    "x-lastModified": "Aug 16, 2016 16:46PM PST"
+  },
+  "paths": {
+    "/drive/v3/about": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "user"
+          }
+        ]
+      }
+    },
+    "/drive/v3/files": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "corpus",
+            "in": "query",
+            "description": "The source of files to list. (string)",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "A comma-separated list of sort keys. Valid keys are 'createdTime', 'folder', 'modifiedByMeTime', 'modifiedTime', 'name', 'quotaBytesUsed', 'recency', 'sharedWithMeTime', 'starred', and 'viewedByMeTime'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedTime desc,name. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored. (string)",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The maximum number of files to return per page. (integer, 1-1000)",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": 0
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response. (string)",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "A query for filtering the file results. See the \"Search for Files\" guide for supported syntax. (string)",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "spaces",
+            "in": "query",
+            "description": "A comma-separated list of spaces to query within the corpus. Supported values are 'drive', 'appDataFolder' and 'photos'. (string)",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          }
+        ]
+      }
+    }
+  }
+}

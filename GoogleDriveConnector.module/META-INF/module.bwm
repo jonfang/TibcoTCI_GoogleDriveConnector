@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_7vjU0FxREeaq-dA-iYlHEQ" targetNamespace="http://tns.tibco.com/bw/composite/GoogleDriveConnector.module" name="GoogleDriveConnector.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_mmb4YGMoEeaE7tRYjY5klw" name="drive-v3-about" promote="ComponentProcess/drive-v3-about">
+    <sca:interface.wsdl xmi:id="_mmj0MGMoEeaE7tRYjY5klw" interface="http://xmlns.example.com/20160808125957PLT#wsdl.interface(drive-v3-about)" scaext:wsdlLocation="../Processes/googledriveconnector/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_mmj0MWMoEeaE7tRYjY5klw" name="RestService" path="/drive/v3/about" docBasePath="http://localhost:7777/GoogleDriveConnector.module" docResourcePath="Drive" basePath="/" connector="googledriveconnector.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/GoogleDriveConnector_1.0.json">
+      <operation xmi:id="_mmj0MmMoEeaE7tRYjY5klw" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_mmtlMWMoEeaE7tRYjY5klw">
+          <parameterMapping xmi:id="_mmtlMmMoEeaE7tRYjY5klw" parameterName="fields" parameterType="Query" dataType="string" description=""/>
+        </parameters>
+        <clientFormat>JSON</clientFormat>
+      </operation>
+      <parameters xmi:id="_mmtlMGMoEeaE7tRYjY5klw"/>
+      <clientFormat>JSON</clientFormat>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_mmj0M2MoEeaE7tRYjY5klw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_mhz0AGQNEea2VbXY_0p4oA" name="drive-v3-files" promote="ComponentProcess/drive-v3-files">
+    <sca:interface.wsdl xmi:id="_miBPYGQNEea2VbXY_0p4oA" interface="http://xmlns.example.com/20160808125957PLT#wsdl.interface(drive-v3-files1)" scaext:wsdlLocation="../Processes/googledriveconnector/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_miGH4GQNEea2VbXY_0p4oA" name="RestService1" path="/drive/v3/files" docBasePath="http://localhost:7777/GoogleDriveConnector.module" docResourcePath="Drive" basePath="/" connector="googledriveconnector.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/GoogleDriveConnector_1.0.json">
+      <operation xmi:id="_miHWAGQNEea2VbXY_0p4oA" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_miNcoWQNEea2VbXY_0p4oA">
+          <parameterMapping xmi:id="_miODsGQNEea2VbXY_0p4oA" parameterName="corpus" parameterType="Query" dataType="string" description="The source of files to list. (string)"/>
+          <parameterMapping xmi:id="_miODsWQNEea2VbXY_0p4oA" parameterName="orderBy" parameterType="Query" dataType="string" description="A comma-separated list of sort keys. Valid keys are 'createdTime', 'folder', 'modifiedByMeTime', 'modifiedTime', 'name', 'quotaBytesUsed', 'recency', 'sharedWithMeTime', 'starred', and 'viewedByMeTime'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedTime desc,name. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored. (string)"/>
+          <parameterMapping xmi:id="_miODsmQNEea2VbXY_0p4oA" parameterName="pageSize" parameterType="Query" dataType="integer#int32" description="The maximum number of files to return per page. (integer, 1-1000)"/>
+          <parameterMapping xmi:id="_miODs2QNEea2VbXY_0p4oA" parameterName="pageToken" parameterType="Query" dataType="string" description="The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response. (string)"/>
+          <parameterMapping xmi:id="_miODtGQNEea2VbXY_0p4oA" parameterName="q" parameterType="Query" dataType="string" description="A query for filtering the file results. See the &quot;Search for Files&quot; guide for supported syntax. (string)"/>
+          <parameterMapping xmi:id="_miODtWQNEea2VbXY_0p4oA" parameterName="spaces" parameterType="Query" dataType="string" description="A comma-separated list of spaces to query within the corpus. Supported values are 'drive', 'appDataFolder' and 'photos'. (string)"/>
+          <parameterMapping xmi:id="_miODtmQNEea2VbXY_0p4oA" parameterName="fields" parameterType="Query" dataType="string" description=""/>
+        </parameters>
+        <clientFormat>JSON</clientFormat>
+      </operation>
+      <parameters xmi:id="_miNcoGQNEea2VbXY_0p4oA"/>
+      <clientFormat>JSON</clientFormat>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_miH9EGQNEea2VbXY_0p4oA" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_8Sg38FxREeaq-dA-iYlHEQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8StFMFxREeaq-dA-iYlHEQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8Sx9sFxREeaq-dA-iYlHEQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8S22MFxREeaq-dA-iYlHEQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8S8VwFxREeaq-dA-iYlHEQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8TB1UFxREeaq-dA-iYlHEQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_rrWWQF2iEeavCuFsFqcwUg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_rrWWQV2iEeavCuFsFqcwUg" processName="googledriveconnector.module.Process"/>
+    <sca:service xmi:id="_mmVKsGMoEeaE7tRYjY5klw" name="drive-v3-about">
+      <sca:interface.wsdl xmi:id="_mmW_4GMoEeaE7tRYjY5klw" interface="http://xmlns.example.com/20160808125957PLT#wsdl.interface(drive-v3-about)" scaext:wsdlLocation="../Processes/googledriveconnector/module/Process.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_mhsfQGQNEea2VbXY_0p4oA" name="drive-v3-files">
+      <sca:interface.wsdl xmi:id="_mhuUcGQNEea2VbXY_0p4oA" interface="http://xmlns.example.com/20160808125957PLT#wsdl.interface(drive-v3-files1)" scaext:wsdlLocation="../Processes/googledriveconnector/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

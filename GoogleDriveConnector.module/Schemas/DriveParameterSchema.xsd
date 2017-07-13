@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:source="bw.rest" xmlns:tns="http://xmlns.example.com/Drive/parameters" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.example.com/Drive/parameters">
+  <xs:element name="drive-v3-aboutGetParameters">
+    <xs:complexType>
+      <xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about1GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="fields" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="key" type="xs:string"/>
+            </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about2GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="fields" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="1" name="key" type="xs:string"/>
+            </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about3GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="fields" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="key" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about4GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="fields" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="1" name="key" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about5GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about6GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about7GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about8GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-about9GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-filesGetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="corpus" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="orderBy" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="pageSize" type="xs:integer"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="pageToken" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="q" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="spaces" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="drive-v3-files1GetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="corpus" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="orderBy" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="pageSize" type="xs:integer"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="pageToken" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="q" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="spaces" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="fields" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
